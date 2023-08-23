@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "Poppins", sans-serif;
+        }
+        ,
+        h1,
+        h2,
+        h3 {
+        }
+      }
+    </style>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="lg:flex lg:gap-5 lg:justify-between lg: max-w-none">
+      <div class="mx-5 sm:border-2 sm:mx-32 sm:px-5 lg:ml-10 lg:w-full">
+        <div class="flex justify-center py-5">
+          <img src="../assets/logo BNNET.png" alt="Logo" class="w-10" />
+          <p class="text-xl text-blue-700 font-bold">BNNET</p>
+        </div>
+        <hr />
+        <div class="pt-3.5">
+          <p class="font-bold">Data Diri</p>
+          <p class="mb-3.5">Informasi Pribadi</p>
+          <p class="text-xl font-bold">Isi data dulu yuk!</p>
+        </div>
+        <div>
+          <p class="pt-5 pb-2">Nama Lengkap*</p>
+          <input
+            type="text"
+            placeholder="Masukan Nama Lengkap"
+            class="border rounded-md text-xl w-full py-2.5 px-2"
+          />
+          <p class="pt-5 pb-2">Email*</p>
+          <input
+            type="text"
+            placeholder="Masukan Nama Lengkap"
+            class="border rounded-md text-xl w-full py-2.5 px-2"
+          />
+          <p class="pt-5 pb-2">No Handphone*</p>
+          <input
+            type="text"
+            placeholder="Masukan Nama Lengkap"
+            class="border rounded-md text-xl w-full py-2.5 px-2"
+          />
+          <p class="text-xs text-gray-400">
+            Pastikan nomor terhubung dengan Whatsapp
+          </p>
+          <p class="pt-5 pb-2">Pilih Kebutuhan Anda* :</p>
+          <div>
+            <div class="flex gap-3.5 border rounded-md py-3.5 my-2">
+              <input type="radio" name="" id="" class="mx-2.5" />
+              <p>Pribadi</p>
+            </div>
+            <div class="flex gap-3.5 border rounded-md py-3.5 my-2">
+              <input type="radio" name="" id="" class="mx-2.5" />
+              <p>Bisnis</p>
+            </div>
+            <div class="flex gap-3.5 border rounded-md py-3.5 my-2">
+              <input type="radio" name="" id="" class="mx-2.5" />
+              <p>Kantor</p>
+            </div>
+            <div class="flex justify-center">
+              <button
+                class="text-white text-xl bg-sky-600 hover:bg-sky-700 rounded-lg px-5 py-3 my-2.5 shadow-md"
+              >
+                <a href="landing_page.html">DAFTAR</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:flex lg:justify-end lg:items-center">
+        <img src="../assets/connection.jpg" alt="Connection" class="hidden lg:block lg:rounded-md lg:shadow-md lg:w-[1000px] lg:mr-20"/>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div
+      class="bg-blue-200 border-blue-400 border-2 flex flex-col text-center items-center"
+    >
+      <div class="flex gap-2 pt-2.5">
+        <a href="#">
+          <img src="../assets/logo BNNET.png" alt="Logo" class="w-[50px]" />
+        </a>
+        <p class="font-bold text-2xl text-blue-700 flex items-center">BNNET</p>
+      </div>
+      <p class="text-blue-700 mb-2.5">©2023 PT.Bangun Nusa Network</p>
+    </div>
+  </footer>
+</html>
