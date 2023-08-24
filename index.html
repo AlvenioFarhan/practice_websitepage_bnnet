@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -33,59 +38,140 @@
     <title>Home</title>
   </head>
   <header>
-    <!-- Navigation -->
-    <nav
-      class="flex gap-5 bg-slate-100 w-full items-center justify-between shadow fixed z-10 inset-x-0 top-0"
-    >
-      <button class="mx-20">
-        <img src="../assets/logo BNNET.png" alt="Logo" class="h-10 w-10" />
-      </button>
-      <div class="flex gap-3.5 items-center">
-        <a href="index.html"
-          ><button class="hover:bg-slate-400 p-6">Home</button></a
-        >
-        <a href="components/product.html"><button class="hover:bg-slate-400 p-6">Produk</button></a>
-        <a href="components/about_us.html"
-          ><button class="hover:bg-slate-400 p-6">Tentang Kami</button></a
-        >
-        <a href="components/contact_us.html"
-          ><button class="hover:bg-slate-400 p-6">Hubungi Kami</button></a
-        >
-      </div>
-      <div class="flex gap-5 pr-10 items-center">
-        <a href="components/register.html"
-          ><button
-            class="border p-2 rounded-2xl bg-blue-400 hover:bg-blue-500 text-white"
+    <div class="flex justify-center">
+      <div
+        class="fixed bg-slate-200 flex justify-between sm:justify-around lg:justify-between w-full z-10"
+      >
+        <div class="m-3.5">
+          <img src="./assets/logo BNNET.png" alt="logo" class="w-10 h-10" />
+        </div>
+
+        <!-- navbar tab-desktop -->
+        <div class="hidden sm:block">
+          <a href="index.html"
+            ><button class="hover:bg-slate-400 p-6">Home</button></a
           >
-            Daftar Sekarang
-          </button></a
-        >
+          <a href="components/product.html"
+            ><button class="hover:bg-slate-400 p-6">Produk</button></a
+          >
+          <a href="components/about_us.html"
+            ><button class="hover:bg-slate-400 p-6">Tentang Kami</button></a
+          >
+          <a href="components/contact_us.html"
+            ><button class="hover:bg-slate-400 p-6">Hubungi Kami</button></a
+          >
+        </div>
+        <div class="hidden sm:block sm:flex sm:items-center sm:mr-3.5">
+          <a href="components/register.html"
+            ><button
+              class="border p-2 rounded-2xl bg-blue-400 hover:bg-blue-500 text-white"
+            >
+              Daftar Sekarang
+            </button></a
+          >
+        </div>
+
+        <!-- navbar mobile -->
+        <div class="sm:hidden m-3.5">
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            class="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-slate-200 border-blue-400 border-2"
+          >
+            <ul
+              class="py-2 text-sm text-sky-700 dark:text-sky-700"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./components/product.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Product</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./components/about_us.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./components/contact_us.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Hubungi Kami</a
+                >
+              </li>
+              <hr />
+              <li>
+                <a
+                  href="./components/register.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Daftar Sekarang</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </nav>
-    <!-- End Navbar -->
+    </div>
   </header>
   <body>
-    <!-- Body -->
-    <div class="relative">
-      <img src="../assets/pantai1.jpg" alt="Pantai" class="shadow-md" />
+    <div class="relative mt-16">
+      <img src="./assets/pantai1.jpg" alt="pantai" />
       <div
         class="absolute top-0 flex flex-col text-center place-content-center w-full h-full"
       >
-        <h1 class="text-6xl text-white font-bold">GET CONNECTED</h1>
-        <p class="text-5xl text-white font-bold">WITH US</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl text-white font-bold">
+          GET CONNECTED
+        </h1>
+        <p class="text-2xl sm:text-3xl lg:text-5xl text-white font-bold">
+          WITH US
+        </p>
       </div>
-      <div class="absolute bottom-0 flex flex-col text-center w-full pb-10">
-        <p class="text-2xl text-white font-bold">
+      <div class="absolute bottom-0 flex flex-col text-center w-full">
+        <p class="text-white font-bold lg:text-3xl">
           PILIH PAKET WIFI BNNET UNTUK KEBUTUHAN INTERNET DI RUMAH ANDA.
         </p>
-        <div class="flex justify-center gap-1">
-          <p class="text-lg text-red-500 font-bold">GRATIS</p>
-          <p class="text-lg text-white font-bold">BIAYA PEMASANGAN 500 RIBU</p>
+        <div class="flex justify-center gap-1 sm:pb-3.5">
+          <p class="text-sm lg:text-3xl text-red-500 font-bold">GRATIS</p>
+          <p class="text-sm lg:text-3xl text-white font-bold">BIAYA PEMASANGAN 500 RIBU</p>
         </div>
       </div>
     </div>
 
-    <div class="flex justify-center w-full py-5">
+    <div
+      class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 justify-center w-full py-5"
+    >
       <div class="p-5">
         <div
           class="rounded-3xl shadow-xl p-5 text-center border-sky-400 border hover:border-sky-700"
@@ -132,7 +218,7 @@
           <button
             class="bg-sky-400 hover:bg-sky-700 rounded-md p-3.5 my-5 text-white shadow-md"
           >
-            <a href="register.html">BUY PLAN</a>
+            <a href="components/register.html">BUY PLAN</a>
           </button>
         </div>
       </div>
@@ -188,12 +274,12 @@
       </div>
     </div>
 
-    <div class="flex gap-3.5">
-      <div class="mx-10">
-        <div class="text-center my-10">
+    <div class="lg:flex">
+      <div class="mx-3.5 sm:flex sm:flex-col sm:justify-center sm:items-center lg:items-start">
+        <div class="text-center my-3.5">
           <p class="text-4xl">Pembayaran yang Mudah!</p>
         </div>
-        <div class="px-10">
+        <div class="sm:text-center lg:text-start">
           <p class="text-2xl font-bold">Bank (ATM & Online)</p>
           <img
             src="../assets/sistem_pembayaran.jpg"
@@ -201,7 +287,7 @@
             class="w-96"
           />
         </div>
-        <div class="px-10">
+        <div class="sm:text-center lg:text-start">
           <p class="text-2xl font-bold">Method</p>
           <img
             src="../assets/sistem_pembayaran.jpg"
@@ -209,16 +295,16 @@
             class="w-96"
           />
         </div>
-        <div class="px-10">
+        <div class="sm:text-center lg:text-start">
           <p class="text-2xl font-bold">Method</p>
           <img
             src="../assets/sistem_pembayaran.jpg"
             alt="Sistem Pembayaran"
-            class="w-96"
+            class="w-96 lg:w-72"
           />
         </div>
       </div>
-      <div class="flex items-center shadow">
+      <div class="mx-3.5 pb-3.5 shadow sm:flex sm:justify-center">
         <img
           src="../assets/Person on computer.jpg"
           alt="Person"
@@ -227,10 +313,12 @@
       </div>
     </div>
 
-    <div class="px-10 py-5 bg-blue-100 grid grid-cols-2 shadow-xl">
-      <div class="text-sky-700">
-        <p class="text-2xl">Syarat dan Ketentuan</p>
-        <ul>
+    <div class="bg-blue-100 shadow-xl sm:flex sm:justify-between">
+      <div
+        class="text-sky-700 flex flex-col justify-center items-center sm:items-start"
+      >
+        <p class="text-2xl py-3.5 sm:mx-3.5">Syarat dan Ketentuan</p>
+        <ul class="mx-3.5 pb-3.5">
           <li class="text-sm">
             Penalty Rp. 1.000.000 jika berhenti sebelum 12 bulan
           </li>
@@ -240,23 +328,23 @@
           <li class="text-sm">Harga sudah termasuk PPN</li>
         </ul>
       </div>
-      <div class="flex items-center justify-end">
+      <div class="flex justify-center sm:justify-end py-3.5 sm:py-10">
         <button
-          class="text-white text-2xl bg-sky-600 hover:bg-sky-700 rounded-lg px-5 py-3 shadow-md"
+          class="text-white text-2xl bg-sky-600 hover:bg-sky-700 rounded-lg px-5 py-3 sm:px-3.5 sm:py-1 sm:mr-3.5 shadow-md"
         >
           Contact Us
         </button>
       </div>
     </div>
-
-    <!-- End  Body -->
+    <!-- end body -->
   </body>
+
   <footer>
     <!-- Nav Footer -->
-    <div class="flex items-center fixed right-0 bottom-0 mr-10">
+    <div class="flex items-center fixed right-0 bottom-0 mr-3.5">
       <button class="bg-sky-400 rounded-t-2xl p-2 px-5 flex gap-2">
-        <img src="../assets/Wa.svg" alt="Whatsapp" class="w-5 h-5" />
-        <p>Hubungi Kami</p>
+        <img src="../assets/Wa.svg" alt="Whatsapp" class="w-7 h-7" />
+        <p class="hidden sm:block">Hubungi Kami</p>
       </button>
     </div>
     <!-- End Nav Footer -->

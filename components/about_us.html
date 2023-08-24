@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -33,41 +38,117 @@
     <title>About Us</title>
   </head>
   <header>
-    <!-- Navigation -->
-    <nav
-      class="flex gap-5 bg-slate-100 w-full items-center justify-between shadow fixed z-10 inset-x-0 top-0"
-    >
-      <button class="mx-20">
-        <img src="../assets/logo BNNET.png" alt="Logo" class="h-10 w-10" />
-      </button>
-      <div class="flex gap-3.5 items-center">
-        <a href="../index.html"
-          ><button class="hover:bg-slate-400 p-6">Home</button></a
-        >
-        <a href="product.html"
-          ><button class="hover:bg-slate-400 p-6">Produk</button></a
-        >
-        <a href="about_us.html"
-          ><button class="hover:bg-slate-400 p-6">Tentang Kami</button></a
-        >
-        <a href="contact_us.html"
-          ><button class="hover:bg-slate-400 p-6">Hubungi Kami</button></a
-        >
-      </div>
-      <div class="flex gap-5 pr-10 items-center">
-        <a href="register.html"
-          ><button
-            class="border p-2 rounded-2xl bg-blue-400 hover:bg-blue-500 text-white"
+    <div class="flex justify-center">
+      <div
+        class="fixed bg-slate-200 flex justify-between sm:justify-around lg:justify-between w-full z-10"
+      >
+        <div class="m-3.5">
+          <img src="../assets/logo BNNET.png" alt="logo" class="w-10 h-10" />
+        </div>
+
+        <!-- navbar tab-desktop -->
+        <div class="hidden sm:block">
+          <a href="/index.html"
+            ><button class="hover:bg-slate-400 p-6">Home</button></a
           >
-            Daftar Sekarang
-          </button></a
-        >
+          <a href="../components/product.html"
+            ><button class="hover:bg-slate-400 p-6">Produk</button></a
+          >
+          <a href="../components/about_us.html"
+            ><button class="hover:bg-slate-400 p-6">Tentang Kami</button></a
+          >
+          <a href="../components/contact_us.html"
+            ><button class="hover:bg-slate-400 p-6">Hubungi Kami</button></a
+          >
+        </div>
+        <div class="hidden sm:block sm:flex sm:items-center sm:mr-3.5">
+          <a href="../components/register.html"
+            ><button
+              class="border p-2 rounded-2xl bg-blue-400 hover:bg-blue-500 text-white"
+            >
+              Daftar Sekarang
+            </button></a
+          >
+        </div>
+
+        <!-- navbar mobile -->
+        <div class="sm:hidden m-3.5">
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            class="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-slate-200 border-blue-400 border-2"
+          >
+            <ul
+              class="py-2 text-sm text-sky-700 dark:text-sky-700"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../components/product.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Product</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../components/about_us.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../components/contact_us.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Hubungi Kami</a
+                >
+              </li>
+              <hr />
+              <li>
+                <a
+                  href="../components/register.html"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Daftar Sekarang</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </nav>
-    <!-- End Navbar -->
+    </div>
   </header>
   <body>
-    <div class="bg-slate-200 py-10 mt-16 px-10 mb-10">
+    <!-- start body -->
+
+    <div class="bg-slate-200 mt-16 py-3.5 px-3.5 sm:px-7 sm:mb-7 lg:px-16">
       <h1 class="text-4xl font-bold text-sky-700">BNNET.</h1>
       <p class="text-sky-700">
         Anim id aute occaecat enim eu. Elit ea incididunt ea nulla adipisicing
@@ -85,16 +166,16 @@
       </p>
     </div>
 
-    <div class="flex justify-center gap-5 mx-20 pb-20">
-      <div class="mr-10 flex flex-col place-content-center">
-        <p class="font-bold text-2xl py-2 text-sky-700">Visi</p>
-        <p>
+    <div class="flex flex-col m-3.5 gap-3.5 sm:px-7 sm:mb-7 lg:flex-row lg:px-16">
+      <div class="flex flex-col place-content-center order-2 lg:order-none">
+        <p class="font-bold text-2xl text-sky-700">Visi</p>
+        <p class="pb-3.5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
           nam in accusantium, at nisi iste porro unde deleniti dolore provident
           consequatur dolores magni, autem ratione! Nesciunt vel deserunt
           pariatur quas.
         </p>
-        <p class="font-bold text-2xl py-2 text-sky-700">Misi</p>
+        <p class="font-bold text-2xl text-sky-700">Misi</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
           nam in accusantium, at nisi iste porro unde deleniti dolore provident
@@ -106,23 +187,21 @@
         <img
           src="../assets/office.jpg"
           alt="office"
-          class="rounded-md w-[1500px] shadow-md"
+          class="rounded-md shadow-md lg:w-[1500px]"
         />
       </div>
     </div>
 
-    <div class="bg-slate-200 flex justify-center gap-5 px-20 py-20">
+    <div class="bg-slate-200 flex flex-col p-3.5 gap-3.5 sm:px-7 sm:mb-7 lg:px-16 lg:flex-row lg:gap-7">
       <div>
         <img
           src="../assets/office2.jpg"
           alt="Office2"
-          class="rounded-md w-[1500px] shadow-md"
+          class="rounded-md shadow-md"
         />
       </div>
-      <div class="ml-10 flex flex-col place-content-center">
-        <p class="font-bold text-4xl py-2 text-sky-700">
-          PT.BANGUN NUSA NETWORK
-        </p>
+      <div class="flex flex-col place-content-center">
+        <p class="font-bold text-2xl text-sky-700 lg:text-4xl">PT.BANGUN NUSA NETWORK</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
           nam in accusantium, at nisi iste porro unde deleniti dolore provident
@@ -132,31 +211,29 @@
       </div>
     </div>
 
-    <div class="flex justify-center">
-      <img
-        src="../assets/Router.jpg"
-        alt="Router"
-        class="shadow rounded-md my-10 w-[700px]"
-      />
+    <div class="flex justify-center m-3.5 sm:px-7">
+      <img src="../assets/Router.jpg" alt="Router" class="shadow rounded-md lg:w-[700px]" />
     </div>
-  </body>
 
-  <div class="bg-slate-200 py-10 px-10">
-    <h1 class="text-2xl font-bold text-sky-700 pb-5">Cakupan Area BNNET</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta est
-      perferendis iure quis vel, quibusdam, qui harum consectetur et expedita
-      corporis, corrupti numquam laborum earum dignissimos quaerat recusandae
-      mollitia tempore!
-    </p>
-  </div>
+    <div class="bg-slate-200 p-3.5 sm:px-7 lg:px-16">
+      <h1 class="text-2xl font-bold text-sky-700">Cakupan Area BNNET</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta est
+        perferendis iure quis vel, quibusdam, qui harum consectetur et expedita
+        corporis, corrupti numquam laborum earum dignissimos quaerat recusandae
+        mollitia tempore!
+      </p>
+    </div>
+
+    <!-- end body -->
+  </body>
 
   <footer>
     <!-- Nav Footer -->
-    <div class="flex items-center fixed right-0 bottom-0 mr-10">
+    <div class="flex items-center fixed right-0 bottom-0 mr-3.5">
       <button class="bg-sky-400 rounded-t-2xl p-2 px-5 flex gap-2">
-        <img src="../assets/Wa.svg" alt="Whatsapp" class="w-5 h-5" />
-        <p>Hubungi Kami</p>
+        <img src="../assets/Wa.svg" alt="Whatsapp" class="w-7 h-7" />
+        <p class="hidden sm:block">Hubungi Kami</p>
       </button>
     </div>
     <!-- End Nav Footer -->
